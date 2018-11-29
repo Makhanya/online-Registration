@@ -1,20 +1,135 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- heading for the page -->
+<div class="container">
+  <!-- need styling for heading  -->
+  <div class="head">
+    <h4> CapaCiTi Programmes Application Form</h4>
+  </div>
+  <div class="col-md-12">
+    <small>
+      The below application form should take 5-10 minutes to complete.
+      Once you have successfully submitted your application, your application is either successful or unsuccessful.
+      The one reason your application could be unsuccessful, is because you did not meet the minimum requirements for
+      this programme.<br>
+      Minimum requirements are:<br>
+      - South African Citizen <br>
+      - Between the ages of 18 - 35 <br>
+      - Matric <br>
+      - Based in the Western Cape or Gauteng. Should you however be guaranteed accommodation in either of these
+      provinces, please provide it in the form below. <br><br>
 
+      <b>Please note, it is your responsibility to ensure that the information you provide to us is correct, and the
+        information on your ID and Matric Certificate match your supporting documents, which you will be contacted by
+        a CapaCiTi team member to supply at a later stage.</b><br><br>
+
+      The second part of the application process involves completing an assessment which will be emailed to you -
+      please keep a look out for the link as you have 3 days to complete this assessment.
+      Please make sure you have set aside 40 min to 1 hour to complete the assessment. If successful, you will then
+      be prompted to upload supporting document such as:<br>
+      - Certified copy of your ID<br>
+      - Certified copy of your Matric Certificate<br>
+      - Certified copy of your proof of address<br>
+      - Certified copy of your highest qualification<br>
+    </small>
+  </div>
+  <hr>
+
+  <div class="container">
+    <mat-accordion>
+      <!-- Section for Demographics -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h5>Demographic Information</h5>
+          </mat-panel-title>
+          <!-- description of the title -->
+          <mat-panel-description>
+            <!-- States if the form have been filled all requrid infomation -->
+            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <!-- reference the demographic component -->
+        <app-demographic></app-demographic>
+      </mat-expansion-panel>
+
+
+      <!-- Section for Course Enrolment -->
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h5>Course Enrolment</h5>
+          </mat-panel-title>
+          <mat-panel-description>
+            <!-- check if select for both course  -->
+            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <!-- reference the enrolment component -->
+        <app-course-enrolment></app-course-enrolment>
+      </mat-expansion-panel>
+
+
+      <!--Section for Qualification  -->
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h5>Qualifications</h5>
+          </mat-panel-title>
+          <mat-panel-description>
+            <!-- check if select for both course  -->
+            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+         <!-- reference the qualification component -->
+        <app-qualification></app-qualification>
+      </mat-expansion-panel>
+
+
+      <!-- Section for Occupation-->
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h5>Occupation</h5>
+          </mat-panel-title>
+          <mat-panel-description>
+            <!-- check if select for both course  -->
+            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+       <app-occupation></app-occupation>
+      </mat-expansion-panel>
+
+<!-- Section for Additional information -->
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <h5>Additional Information</h5>
+            </mat-panel-title>
+            <mat-panel-description>
+              <!-- check if select for both course  -->
+              Currently I am {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <app-additional-information></app-additional-information>
+        </mat-expansion-panel>
+
+
+        <!-- Section for Documents -->
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h5>Upload Documents</h5>
+              </mat-panel-title>
+              <mat-panel-description>
+                <!-- check if select for both course  -->
+                Currently I am {{panelOpenState ? 'open' : 'closed'}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <app-upload-documents></app-upload-documents>
+          </mat-expansion-panel>
+    </mat-accordion>
+
+
+
+  
+
+  </div>

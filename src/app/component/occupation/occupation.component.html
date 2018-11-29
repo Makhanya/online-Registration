@@ -1,0 +1,31 @@
+<!--Occupation -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="example-container">
+
+        <!-- Current Occupation -->
+        <mat-form-field>
+          <mat-select placeholder="What is your current occupation?">
+            <mat-option *ngFor="let occupation of occupations" [value]="occupation.current">
+              {{occupation.current}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="example-container">
+        
+        <!-- Job Titile-->
+        <h6>
+          <small>
+            If you are employed, what is your job title? (If this does not apply to you please indicate N/A)
+          </small>
+        </h6>
+        <textarea name="currentJobTitle" id="jobTitle" cols="25" rows="3"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of span 4 -->

@@ -1,0 +1,124 @@
+<div class="container">
+  <!-- the division of the colums for the user input -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="example-container">
+        <div class="heading">
+          <h6>
+            Personal Details
+          </h6>
+        </div>
+        <div class="example-container">
+          <!-- first element to be change to Angular material -->
+          <!-- Comment bootstrap and try material angular -->
+
+          <!-- how to create a select option  -->
+          <mat-form-field>
+            <mat-select placeholder="Title">
+              <mat-option *ngFor="let title of titles" [value]="title.title">
+                {{title.title}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <!-- Name -->
+          <mat-form-field>
+            <input matInput placeholder="Name">
+          </mat-form-field>
+          <!-- Surname -->
+          <mat-form-field>
+            <input matInput placeholder="Surname">
+          </mat-form-field>
+          <!-- ID Number -->
+          <mat-form-field>
+            <input matInput placeholder="ID Number">
+          </mat-form-field>
+          <!-- Date of Birth -->
+          <mat-form-field>
+            <input matInput placeholder="Date of Birth">
+          </mat-form-field>
+          <!-- Age -->
+          <mat-form-field>
+            <input matInput placeholder="Age">
+          </mat-form-field>
+
+          <!-- select of gender -->
+          <mat-form-field>
+            <mat-select placeholder="Gender">
+              <mat-option *ngFor="let sex of sexs" [value]="sex.gender">
+                {{sex.gender}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <!-- marital status -->
+          <mat-form-field>
+            <mat-select placeholder="Marital Status" required="true">
+              <mat-option *ngFor="let status of marital" [value]="status.status">
+                {{status.status}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <!-- End of first Column -->
+
+    <!-- Start of first Column -->
+    <div class="col-md-4">
+      <div class="example-container">
+        <div class="heading">
+          <h6>Contact Details</h6>
+        </div>
+        <!-- Email address -->
+        <mat-form-field>
+          <input matInput placeholder="Email Address">
+        </mat-form-field>
+        <!-- Mobile number -->
+        <mat-form-field>
+          <input matInput placeholder="Mobile Number">
+        </mat-form-field>
+
+        <!-- Alternative number -->
+        <mat-form-field>
+          <input matInput placeholder="Alternative Number">
+        </mat-form-field>
+
+        <!-- Alternative Number -->
+
+
+
+        <!-- Street Address -->
+        <mat-form-field>
+          <input matInput placeholder="Street Address">
+        </mat-form-field>
+
+
+        <!-- Suburb -->
+        <mat-form-field>
+          <input matInput placeholder="Suburb">
+        </mat-form-field>
+
+        <!-- City -->
+        <mat-form-field>
+          <input matInput placeholder="City">
+        </mat-form-field>
+
+        <!-- Code -->
+        <mat-form-field>
+          <input matInput placeholder="Code">
+        </mat-form-field>
+
+        <!-- Province  -->
+        <mat-form-field>
+          <mat-select placeholder="Province">
+            <mat-option *ngFor="let province of provinces" [value]="province.province">
+              {{province.province}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+      <!-- End of second Column -->
+    </div>
+  </div>
+  <!--End of Row-->
+</div>

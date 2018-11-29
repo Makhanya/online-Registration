@@ -1,0 +1,24 @@
+<!-- Additional Information -->
+<div class="container">
+   <div class="row">
+    <div class="col-md-4">
+      <div class="example-container">
+        <!-- How did you hear about us? -->
+        <mat-form-field>
+          <mat-select placeholder="Where did you hear about us?">
+            <mat-option *ngFor="let hear of hearAboutUs" [value]="hear.hear">
+              {{hear.hear}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="example-container">
+        <!-- Select Tech Choice -->
+        <h6><small>If you selected 'other' above, please specify</small></h6>
+        <textarea  cols="25" rows="2"></textarea>
+      </div>
+    </div>
+  </div>
+</div>

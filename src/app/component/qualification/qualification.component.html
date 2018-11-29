@@ -1,0 +1,106 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="example-container">
+        <!-- Select Matric Major -->
+        <mat-form-field>
+          <mat-select placeholder="Matric Major">
+            <mat-option *ngFor="let subject of subjects" [value]="subject.subject">
+              {{subject.subject}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!-- Qualification name -->
+        <mat-form-field>
+          <input matInput placeholder="Qualification Name">
+        </mat-form-field>
+
+
+        <!-- IT backgroud -->
+        <mat-form-field>
+          <mat-select placeholder="Do you have an IT background">
+            <mat-option *ngFor="let result of yesOrNo" [value]="result.status">
+              {{result.status}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="example-container">
+        <!-- Select Qualification -->
+        <mat-form-field>
+          <mat-select placeholder="Hightest Qualification Completed">
+            <mat-option *ngFor="let qualification of qualifications" [value]="qualification.qualification">
+              {{qualification.qualification}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!-- Other Qualification  -->
+        <mat-form-field>
+          <input matInput placeholder="If you selected 'Other' above">
+        </mat-form-field>
+
+
+        <!-- IT backgroud -->
+        <mat-form-field>
+          <mat-select placeholder="Do you have programming experience?">
+            <mat-option *ngFor="let result of yesOrNo" [value]="result.status">
+              {{result.status}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="example-container">
+        <!-- Programming languages -->
+        <h6>
+          <small>If yes, what programming languages do you know? (If this does not apply to you please indicate N/A)
+            *</small>
+        </h6>
+
+        <textarea cols="30" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="example-container">
+        <br>
+        <!-- Background In Project Management -->
+
+        <mat-form-field>
+          <mat-select placeholder="Do you have project management experience? ">
+            <mat-option *ngFor="let result of yesOrNo" [value]="result.status">
+              {{result.status}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <!-- Project Management Experience -->
+      <div class="example-container">
+        <h6>
+          <small>If yes, what type of project management experience have you done? </small>
+        </h6>
+        <textarea cols="30" rows="3"></textarea>
+      </div>
+    </div>
+    <br>
+    <!-- Available Full-time computer access and internet connection -->
+    <div class="col-md-4">
+      <div class="example-container">
+        <mat-form-field>
+          <mat-select placeholder="Do you have *full-time* access to a computer? ">
+            <mat-option *ngFor="let result of yesOrNo" [value]="result.status">
+              {{result.status}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+</div>
